@@ -1,1 +1,7 @@
 ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no 127.0.1.1 -p 2232 -l <username>
+
+ssh -vv -L9999:<host>:<port> -N 127.0.1.1 -p 2232 -l <user>       
+
+$ ssh -vv -L9000:<host>:<port> -N 127.0.1.1 -p 2232 -l  
+netstat -an | grep LISTEN | grep 9000
+
