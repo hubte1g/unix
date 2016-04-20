@@ -1,3 +1,6 @@
+ ssh -o UserKnownHostsFile=/dev/null -o StrictKeyChecking=no 127.0.1.1 -p 2232 -l tkb2171
+# ssh -o UserKnownHostsFile=/dev/nell -o StrictKeyChecking=no 127.0.1.1 -p 2232 -l tkb2171
+
 ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no 127.0.1.1 -p 2232 -l <username>
 
 ssh -vv -L9999:<host>:<port> -N 127.0.1.1 -p 2232 -l <user>       
