@@ -11,3 +11,6 @@ r = 4
 
 # tail log file from running script
 tail $(ls /dir/dir_/dir__/logs/file_name_mult* | tail -2)
+
+# split large file into parts
+split -l `wc -l bigfile.txt | awk '{print $1/32}'` -v bigfile.txt “part-“
